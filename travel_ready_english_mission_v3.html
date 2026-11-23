@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TRAVEL READY — English Mission</title>
+<style>
+:root{--ink:#18313b;--muted:#61737a;--cream:#fffaf1;--paper:#fff;--coral:#ff765e;--orange:#ffad55;--teal:#168f8b;--blue:#4778b8;--yellow:#ffd66b;--line:#e8e5dc;--green:#23845f;--red:#c44c46;--shadow:0 14px 40px #19364012}
+*{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif;line-height:1.5}
+button,input,textarea{font:inherit}button{cursor:pointer}.top{background:linear-gradient(110deg,#173b46,#176d70);color:white;padding:22px max(20px,calc((100% - 1120px)/2));display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-weight:900;letter-spacing:.12em;font-size:13px}.top small{opacity:.8}.wrap{max-width:1120px;margin:auto;padding:26px 20px 60px}.hero{background:linear-gradient(125deg,#ffe3c5,#fff0c9 55%,#d9f0e9);border-radius:26px;padding:28px;display:grid;grid-template-columns:1.4fr .6fr;gap:20px;align-items:center;box-shadow:var(--shadow)}.eyebrow{font-size:12px;font-weight:900;letter-spacing:.14em;color:#a65c3e}.hero h1{font-size:clamp(32px,5vw,56px);line-height:1.02;margin:8px 0 12px;letter-spacing:-.04em}.hero p{max-width:620px;color:#465d61;margin:0}.stamp{justify-self:center;background:#fff9;border:2px dashed #e2a15c;border-radius:50%;width:150px;height:150px;display:grid;place-items:center;text-align:center;font-weight:900;color:#a65c3e;transform:rotate(7deg)}.stats{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}.stat{background:white;border:1px solid var(--line);border-radius:14px;padding:10px 14px;min-width:110px}.stat b{display:block;font-size:20px}.stat span{font-size:11px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.08em}.progress{height:9px;background:#e9e6dc;border-radius:99px;overflow:hidden;margin:10px 0 22px}.progress>div{height:100%;width:0;background:linear-gradient(90deg,var(--coral),var(--orange),var(--teal));transition:width .3s}.section-head{display:flex;justify-content:space-between;align-items:end;gap:12px;margin:26px 0 14px}.section-head h2{margin:0;font-size:22px}.section-head p{margin:0;color:var(--muted);font-size:13px}.missions{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.mission{background:white;border:1px solid var(--line);border-radius:20px;padding:18px;box-shadow:var(--shadow);display:flex;flex-direction:column;min-height:190px}.mission .emoji{font-size:27px}.mission h3{margin:8px 0 4px}.mission p{font-size:13px;color:var(--muted);margin:0 0 14px}.mission button,.primary{border:0;border-radius:12px;padding:11px 16px;background:var(--ink);color:white;font-weight:800;margin-top:auto}.mission button:hover,.primary:hover{filter:brightness(1.12);transform:translateY(-1px)}.mission .tag{font-size:10px;font-weight:900;letter-spacing:.1em;color:var(--teal);text-transform:uppercase}.panel{display:none;background:white;border:1px solid var(--line);border-radius:22px;padding:22px;box-shadow:var(--shadow);margin-top:22px}.panel.active{display:block}.panel-top{display:flex;justify-content:space-between;align-items:center;gap:12px}.pill{background:#e3f3ef;color:#176d65;padding:6px 10px;border-radius:99px;font-size:11px;font-weight:900}.close{border:1px solid var(--line);background:white;border-radius:10px;padding:7px 11px;color:var(--muted)}.question{font-size:22px;font-weight:850;line-height:1.25;margin:18px 0 8px}.sub{color:var(--muted);font-size:14px;margin:0 0 16px}.answers{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.answer{border:1.5px solid var(--line);border-radius:13px;padding:13px;text-align:left;background:#fff;color:var(--ink);font-weight:650}.answer:hover{border-color:var(--teal);background:#f2fbf8}.answer.correct{background:#e4f5ec;border-color:#65b78b}.answer.wrong{background:#fff0ed;border-color:#e98b7d}.feedback{min-height:28px;margin:14px 0;color:var(--muted);font-weight:700}.feedback.good{color:var(--green)}.feedback.bad{color:var(--red)}.controls{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:14px}.secondary{background:#fff;border:1px solid var(--line);color:var(--ink);border-radius:12px;padding:10px 14px;font-weight:800}.primary:disabled{opacity:.4;cursor:not-allowed}.text-answer{width:100%;padding:13px;border:1.5px solid var(--line);border-radius:12px;outline:none}.text-answer:focus{border-color:var(--teal)}.match-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.match-grid button{min-height:62px}.match-grid button.selected{border-color:var(--orange);background:#fff7e8}.match-grid button.matched{background:#e4f5ec;border-color:#65b78b;opacity:.75}.dropzone{border:2px dashed #c9d9d5;border-radius:14px;padding:12px;min-height:52px;background:#f7fbf9}.chips{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}.chip{border:1px solid #d9e5df;background:#eef7f3;border-radius:99px;padding:8px 12px;font-weight:700}.chip:disabled{opacity:.4}.report{background:#f4f8f5;border-radius:16px;padding:16px;margin-top:18px}.report h3{margin:0 0 10px}.report-row{display:flex;justify-content:space-between;border-bottom:1px solid #dce8e1;padding:7px 0;font-size:14px}.report-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}.report-actions button{border:0;border-radius:11px;padding:11px 14px;font-weight:800;background:var(--teal);color:white}.report-actions button.alt{background:white;border:1px solid var(--line);color:var(--ink)}.note{font-size:12px;color:var(--muted)}.hidden{display:none!important}.footer{text-align:center;color:var(--muted);font-size:12px;margin-top:28px}
+@media(max-width:760px){.hero{grid-template-columns:1fr}.stamp{display:none}.missions{grid-template-columns:1fr 1fr}.answers{grid-template-columns:1fr}.top{padding:18px 20px}.match-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.missions{grid-template-columns:1fr}.wrap{padding:18px 14px 40px}.hero{padding:22px}.panel{padding:16px}.question{font-size:19px}}
+
+:root{--ink:#1d2559;--cream:#fff4d6;--coral:#ff4f6d;--orange:#ff9f1c;--teal:#00b8a9;--blue:#3a86ff;--yellow:#ffd23f;--green:#0fa968;--red:#f0384f;--line:#ffd9a0;--shadow:0 12px 30px #6a3df030}
+body{background:linear-gradient(180deg,#fff1c2,#ffe0f0 45%,#d9f1ff) fixed}
+.top{background:linear-gradient(110deg,#6a3df0,#ff4f9a 60%,#ff9f1c)}
+.hero{background:linear-gradient(125deg,#ffd23f,#ff9acb 55%,#7de2d1)}
+.eyebrow{color:#b0215a}.hero p{color:#3b2a63}.stamp{border-color:#ff4f9a;color:#b0215a;background:#fffc}
+.stat{border:0;border-bottom:4px solid var(--blue)}.stat:nth-child(2){border-color:var(--coral)}.stat:nth-child(3){border-color:var(--teal)}.stat b{font-size:24px}
+.progress>div{background:linear-gradient(90deg,#ff4f6d,#ff9f1c,#ffd23f,#00b8a9,#3a86ff,#8b5cf6)}
+.mission{--c:#3a86ff;border:0;border-top:7px solid var(--c);background:linear-gradient(#fff,color-mix(in srgb,var(--c) 12%,#fff));transition:transform .2s}.mission:hover{transform:translateY(-4px)}
+.mission:nth-child(2){--c:#ff4f6d}.mission:nth-child(3){--c:#00a99b}.mission:nth-child(4){--c:#8b5cf6}.mission:nth-child(5){--c:#ff8a00}.mission:nth-child(6){--c:#0fa968}
+.mission button{background:var(--c)}.mission .tag{color:var(--c)}.mission .emoji{font-size:36px}
+.panel{border:2px solid var(--yellow)}.pill{background:#ffe9a8;color:#8a4b00}
+.answer{border:2px solid #cfe0ff;background:#f6f9ff}.answer:hover{border-color:var(--orange);background:#fff3cf}
+.answer.correct{background:#c9f7de;border-color:var(--green)}.answer.wrong{background:#ffd9df;border-color:var(--red)}
+.match-grid button.selected{background:#ffe9a8;border-color:var(--orange)}
+.primary{background:linear-gradient(90deg,#6a3df0,#ff4f9a)}
+.report{background:#eefbf6}.report-actions button{background:var(--blue)}
+.report-actions button.send{background:linear-gradient(90deg,#25d366,#0fa968);font-size:16px;padding:13px 18px}
+.report-actions button.alt{background:#fff}
+.bar{height:9px;background:#e3e8f5;border-radius:9px;overflow:hidden;margin:0 0 6px}.bar i{display:block;height:100%;background:linear-gradient(90deg,#ff4f6d,#ffd23f,#0fa968)}
+.form label{font-weight:800;font-size:13px;display:block;margin:12px 0 6px}
+.feel{display:flex;gap:8px;flex-wrap:wrap}.feel button{font-size:26px;border:2px solid var(--line);background:#fff;border-radius:14px;padding:6px 12px}.feel button.on{border-color:#6a3df0;background:#efe8ff}
+</style>
+</head>
+<body>
+<header class="top"><div><div class="brand">TRAVEL READY <span style="color:#ffd66b">●</span> ENGLISH MISSION</div><small>Practical English for your trip to the United States</small></div><div style="font-size:12px;font-weight:800">LEARN · PRACTICE · GO</div></header>
+<main class="wrap">
+<section class="hero">
+ <div><div class="eyebrow">YOUR PERSONAL TRAVEL CHALLENGE</div><h1>Feel more confident<br>in English.</h1><p>Practice useful words, build sentences and handle real travel situations — one mission at a time. Take your time. You can do it!</p>
+ <div class="stats"><div class="stat"><b id="score">0</b><span>Points</span></div><div class="stat"><b id="done">0/5</b><span>Missions</span></div><div class="stat"><b id="accuracy">—</b><span>Accuracy</span></div></div>
+ <div class="progress"><div id="progressbar"></div></div></div>
+ <div class="stamp">READY<br>FOR THE<br>U.S.A. <span style="font-size:30px">✈</span></div>
+</section>
+<div id="welcomeBack" style="display:none;background:#fff;border:2px solid var(--yellow);border-radius:16px;padding:12px 16px;margin:0 0 18px;font-weight:700;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap"><span id="welcomeText"></span><button class="secondary" onclick="resetProgress()">↺ Start over</button></div>
+<div class="section-head"><div><h2>Choose your mission</h2><p>Each mission has different kinds of challenges.</p></div><span class="pill">5 MISSIONS</span></div>
+<section class="missions">
+ <article class="mission"><div class="emoji">🏨</div><div class="tag">Mission 01 · Hotel</div><h3>Check-in time</h3><p>Reservations, room types, hotel services and solving a booking problem.</p><button onclick="startMission('hotel')">Start mission →</button></article>
+ <article class="mission"><div class="emoji">🍽️</div><div class="tag">Mission 02 · Restaurant</div><h3>At the restaurant</h3><p>Order food and drinks, ask questions, make requests and pay the check.</p><button onclick="startMission('restaurant')">Start mission →</button></article>
+ <article class="mission"><div class="emoji">🧭</div><div class="tag">Mission 03 · Getting around</div><h3>Explore the city</h3><p>Understand directions, places, transportation and sightseeing.</p><button onclick="startMission('city')">Start mission →</button></article>
+ <article class="mission"><div class="emoji">💬</div><div class="tag">Mission 04 · Everyday English</div><h3>Small talk</h3><p>Talk about feelings, family, plans and everyday situations.</p><button onclick="startMission('everyday')">Start mission →</button></article>
+ <article class="mission"><div class="emoji">🧳</div><div class="tag">Mission 05 · Final challenge</div><h3>Travel situations</h3><p>Use what you learned to make decisions in realistic travel moments.</p><button onclick="startMission('final')">Start mission →</button></article>
+ <article class="mission"><div class="emoji">📋</div><div class="tag">For your teacher</div><h3>Learning report</h3><p>See your results, review your mistakes and prepare a report to send to your teacher.</p><button onclick="showReport()">Open report →</button></article>
+</section>
+<section id="game" class="panel">
+ <div class="panel-top"><span id="missionLabel" class="pill">MISSION</span><button class="close" onclick="closeGame()">✕ Close</button></div>
+ <div class="progress"><div id="missionProgress"></div></div>
+ <div id="activity"></div>
+ <div class="feedback" id="feedback" aria-live="polite"></div>
+ <div class="controls"><button class="secondary" onclick="closeGame()">Exit</button><button class="primary" id="next" disabled onclick="nextQuestion()">Check / Continue →</button></div>
+</section>
+<section id="report" class="panel">
+ <div class="panel-top"><span class="pill">TEACHER'S AREA</span><button class="close" onclick="document.getElementById('report').classList.remove('active')">✕ Close</button></div>
+ <h2 style="margin-bottom:4px">Your learning report</h2><p class="sub">A snapshot of your work in this game. Complete more missions to make your report more useful.</p>
+ <div class="form report"><h3>About you</h3>
+<label for="stName">Your name</label><input class="text-answer" id="stName" placeholder="Write your name here..." autocomplete="name">
+<label>How did you feel during the game?</label><div class="feel" id="feel"><button onclick="setFeel(this)" data-f="😄 Great">😄</button><button onclick="setFeel(this)" data-f="🙂 Good">🙂</button><button onclick="setFeel(this)" data-f="😐 So-so">😐</button><button onclick="setFeel(this)" data-f="😟 Difficult">😟</button></div>
+<label for="feelText">Tell your teacher more (what was easy? what was hard?)</label><textarea class="text-answer" id="feelText" rows="3" placeholder="Write in English or Portuguese..."></textarea></div>
+<div id="reportContent"></div>
+ <div class="report-actions"><button class="send" onclick="sendWhatsApp()">📲 SEND TO TEACHER</button><button class="alt" onclick="copyReport()">Copy report</button><button class="alt" onclick="downloadReport()">Download full .txt</button><button class="alt" onclick="window.print()">Print</button><button class="alt" onclick="resetProgress()">↺ Reset progress</button></div>
+ <p class="note">“Send to teacher” opens WhatsApp with a ready message (summary). For the complete report with all your answers, download the .txt and attach it. Your progress is saved automatically in this browser, on this device.</p>
+</section>
+<div class="footer">TRAVEL READY · English practice for real-life communication</div>
+</main>
+<script>
+const missions={
+hotel:{label:"🏨 HOTEL CHECK-IN",items:[
+{type:"choice",q:"You arrive at the hotel. What can you say to start the check-in?",opts:["Hi, I have a reservation.","Hi, I have a suggestion.","Hi, I am the room service."],a:0,why:"“I have a reservation” is a natural way to begin checking in."},
+{type:"choice",q:"The receptionist says: “Let me pull up your reservation.” What does it mean?",opts:["Let me cancel your room.","Let me find your reservation on the system.","Let me call your travel agent."],a:1,why:"“Pull up” here means to find and display information on a computer."},
+{type:"choice",q:"You want to ask if breakfast is included. Choose the best question.",opts:["Breakfast is available?","Does the room include breakfast?","You have breakfast in room?"],a:1,why:"Use “Does ... include ...?” to ask what is part of the booking."},
+{type:"match",q:"Match the hotel words to their meanings.",pairs:[["booking","reservation"],["single room","room for one person"],["double room","room for two / a couple"],["available","free and ready to use"]]},
+{type:"choice",q:"The hotel cannot find your booking. What could the receptionist say?",opts:["Maybe there was a glitch with the booking system.","Maybe the flight is well done.","Maybe the room is seafood."],a:0,why:"A “glitch” is a small problem with a computer system."},
+{type:"text",q:"Complete the sentence: “Did you ______ the room directly through us?”",answer:["book"],hint:"The verb means to reserve.",why:"“Book a room” means to reserve a room."},
+{type:"choice",q:"The receptionist offers a business suite at no extra charge. What does that mean?",opts:["You must pay more.","There is no additional cost.","The room is not available."],a:1,why:"“At no extra charge” means you do not have to pay more."},
+{type:"choice",q:"You need help with your bags. Who can you ask?",opts:["A bellboy / bell attendant.","A travel agent.","A waitress."],a:0,why:"A bell attendant helps hotel guests with their luggage."}
+]},
+restaurant:{label:"🍽️ RESTAURANT ENGLISH",items:[
+{type:"choice",q:"The waiter asks: “Are you ready to order?” What is he asking?",opts:["Are you ready to leave?","Are you ready to choose your food?","Are you ready to pay?"],a:1,why:"“Order” is the verb we use when asking for food or drinks."},
+{type:"choice",q:"You want your salad dressing separate. What do you say?",opts:["Dressing on the side, please.","Dressing well done, please.","Dressing to the room, please."],a:0,why:"“On the side” means served separately."},
+{type:"match",q:"Match the food words to their meanings.",pairs:[["starter","appetizer / first course"],["main course","main dish"],["dessert","sweet food after a meal"],["seafood","food from the sea"]]},
+{type:"choice",q:"How do you like your steak? You want it cooked halfway between rare and well done.",opts:["Medium.","Spicy.","Sparkling."],a:0,why:"“Medium” is between rare and well done."},
+{type:"choice",q:"You want to take the rest of your meal with you. What can you say?",opts:["I'll take this to go.","I'll take this on the side.","I'll take this well done."],a:0,why:"“To go” means you want the food packed to take away."},
+{type:"choice",q:"You have finished eating and want to pay. Choose the natural question in the U.S.",opts:["Can I have the check, please?","Can I have the booking, please?","Can I have the journey, please?"],a:0,why:"In the United States, “check” is commonly used for the restaurant bill."},
+{type:"text",q:"Complete the request: “Could I have a bottle of ______ water, please?” (água com gás)",answer:["sparkling"],hint:"The word describes water with bubbles.",why:"“Sparkling water” is água com gás."},
+{type:"choice",q:"The waiter asks: “How is everything?” What is the best response if the food is good?",opts:["Everything is great, thank you.","I'm booking a room.","I'm the last city."],a:0,why:"This is a friendly way to say that everything is good."}
+]},
+city:{label:"🧭 GETTING AROUND",items:[
+{type:"choice",q:"You leave the elevator. The receptionist says: “When you get off the elevator, turn right.” What should you do?",opts:["Leave the elevator and turn right.","Stay in the elevator and turn left.","Take the elevator upstairs."],a:0,why:"“Get off” means to leave a bus, train, elevator or other form of transport."},
+{type:"choice",q:"You want to visit famous places in the city. Which activity is this?",opts:["Sightseeing.","Room service.","Booking."],a:0,why:"Sightseeing means visiting interesting or famous places."},
+{type:"match",q:"Match the expressions.",pairs:[["near","close to"],["next door","in the place beside"],["journey","a trip from one place to another"],["feel free","you are welcome to do something"]]},
+{type:"choice",q:"You want to ask where the nearest ATM is. Choose the best question.",opts:["Could you tell me where the nearest ATM is?","Could you book the nearest ATM?","Could you order the nearest ATM?"],a:0,why:"“Could you tell me where ... is?” is a polite way to ask for directions."},
+{type:"choice",q:"Your flight was long but smooth. What does “smooth” mean here?",opts:["There were no major problems.","The flight was very short.","The flight was expensive."],a:0,why:"A smooth flight is comfortable and without problems."},
+{type:"text",q:"Complete: “Please feel free to ______ the front desk.” (ligar)",answer:["dial"],hint:"Use this verb with a phone number or extension.",why:"“Dial the front desk” means call the reception desk."},
+{type:"choice",q:"You need information about tours and trips. Who could help you?",opts:["A travel agent.","A bellboy.","A chef."],a:0,why:"A travel agent can help arrange trips and travel services."}
+]},
+everyday:{label:"💬 EVERYDAY ENGLISH",items:[
+{type:"choice",q:"Your friend says: “Don't worry!” What does it mean?",opts:["Não se preocupe!","Não reserve!","Não peça!"],a:0,why:"“Don't worry” is a reassuring expression."},
+{type:"choice",q:"Someone asks: “How are you feeling now?” What are they asking about?",opts:["Your emotions or physical condition.","Your hotel reservation.","Your dinner order."],a:0,why:"“Feel” can refer to emotions or physical sensations."},
+{type:"match",q:"Match the words.",pairs:[["wife","esposa"],["faith","fé"],["gossip","fofoca"],["debt","dívida"]]},
+{type:"choice",q:"You want to say that you are alone. Choose the correct sentence.",opts:["I'm by myself.","I'm next door.","I'm well done."],a:0,why:"“By myself” means alone."},
+{type:"choice",q:"Which sentence asks when someone began a job?",opts:["When did you start?","How many hours?","What are you feeling?"],a:0,why:"“When did you start?” asks about the beginning of an activity or job."},
+{type:"choice",q:"Choose the correct word: “I am not ______ about the trip.”",opts:["worried","worry","worries"],a:0,why:"After “am”, use the adjective “worried”."},
+{type:"text",q:"Complete: “Thank ______!” (Graças a Deus!)",answer:["God"],hint:"The expression has two words.",why:"The expression is “Thank God!”."}
+]},
+final:{label:"🧳 FINAL TRAVEL CHALLENGE",items:[
+{type:"choice",q:"The hotel says your room is not ready. You want to ask if you can leave your bags there. What do you say?",opts:["Could you keep my bags for a while?","Could you order my bags?","Could you make my bags well done?"],a:0,why:"This is a polite, natural request at a hotel."},
+{type:"choice",q:"At dinner, you want chicken with the sauce separate. What should you say?",opts:["Could I have the sauce on the side?","Could I have the sauce next door?","Could I have the sauce to go?"],a:0,why:"“On the side” is the expression for a separate serving."},
+{type:"choice",q:"You are looking for a pharmacy. A person says: “It's next door.” Where is it?",opts:["In the building or place beside this one.","Far from here.","Inside the hotel room."],a:0,why:"“Next door” means immediately beside."},
+{type:"text",q:"Write a polite request to get the check at a restaurant.",answer:["can i have the check please","could i have the check please","can i get the check please","could i get the check please"],hint:"Start with “Can I...” or “Could I...”",why:"A polite request is “Could I have the check, please?”"},
+{type:"choice",q:"Your reservation is missing. Which sentence explains the problem?",opts:["I booked a room, but I can't find my reservation.","I ordered a room, but I can't find my dessert.","I suggested a room, but I can't find my flight."],a:0,why:"“Book a room” and “reservation” are the correct travel expressions."},
+{type:"choice",q:"The waiter asks if you want dessert. You are full. What can you say?",opts:["No, thank you. I'm done.","No, thank you. I'm available.","No, thank you. I'm a booking."],a:0,why:"“I'm done” can mean you have finished eating."}
+]}
+};
+let current=null,index=0,score=0,attempts=0,correct=0,results={},answered=false,selected=null,matched=[],pairTurn=0,errorLog=[];
+const $=id=>document.getElementById(id);
+function updateStats(){ $('score').textContent=score;$('done').textContent=Object.keys(results).length+'/5';$('accuracy').textContent=attempts?Math.round(correct/attempts*100)+'%':'—';$('progressbar').style.width=(Object.keys(results).length/5*100)+'%';}
+function startMission(id){current=id;index=0;answered=false;$('report').classList.remove('active');$('game').classList.add('active');$('missionLabel').textContent=missions[id].label;renderQuestion();$('game').scrollIntoView({behavior:'smooth',block:'start'});}
+function closeGame(){$('game').classList.remove('active');}
+function renderQuestion(){
+ const item=missions[current].items[index];answered=false;selected=null;matched=[];pairTurn=0;
+ $('missionProgress').style.width=(index/missions[current].items.length*100)+'%';
+ $('feedback').textContent='';$('feedback').className='feedback';$('next').disabled=true;$('next').textContent='Check / Continue →';
+ let html=`<div class="note">CHALLENGE ${index+1} OF ${missions[current].items.length}</div><div class="question">${item.q}</div>`;
+ if(item.type==='choice'){
+  const opts=shuffleOpts(item);
+  html+='<div class="answers">'+opts.map(o=>`<button class="answer" data-i="${o.i}" onclick="choose(this,${o.i})">${o.v}</button>`).join('')+'</div>';
+ }else if(item.type==='text'){
+  html+=`<p class="sub">${item.hint||'Type your answer in English.'}</p><input class="text-answer" id="typed" placeholder="Write your answer here..." autocomplete="off" onkeydown="if(event.key==='Enter')checkText()"> <div style="margin-top:10px"><button class="secondary" onclick="checkText()">Check answer</button></div>`;
+  $('next').textContent='Continue →';
+ }else if(item.type==='match'){
+  const left=shuf(item.pairs.map((p,i)=>({v:p[0],i})));
+  const right=shuf(item.pairs.map((p,i)=>({v:p[1],i})));
+  html+='<p class="sub">Select one item on the left, then its match on the right.</p><div class="match-grid"><div>'+left.map(o=>`<button class="answer" data-side="l" data-i="${o.i}" onclick="pickMatch(this,'l',${o.i})">${o.v}</button>`).join('')+'</div><div>'+right.map(o=>`<button class="answer" data-side="r" data-i="${o.i}" onclick="pickMatch(this,'r',${o.i})">${o.v}</button>`).join('')+'</div></div>';
+ }
+ $('activity').innerHTML=html;
+}
+function mark(ok,msg){if(answered)return;answered=true;attempts++;if(ok){correct++;score+=10;$('feedback').textContent='✓ '+msg;$('feedback').className='feedback good';}else{const item=missions[current].items[index];let expected=item.type==='choice'?item.opts[item.a]:(item.answer?item.answer[0]:'Review the matching pairs');errorLog.push({mission:missions[current].label,question:item.q,answer:expected});$('feedback').textContent='Not quite. '+msg;$('feedback').className='feedback bad';}
+ $('next').disabled=false;$('next').textContent=index===missions[current].items.length-1?'Finish mission →':'Next challenge →';updateStats();}
+function choose(btn,i){if(answered)return;const item=missions[current].items[index];document.querySelectorAll('.answer').forEach(b=>{b.disabled=true;if(Number(b.dataset.i)===item.a)b.classList.add('correct')});if(i!==item.a)btn.classList.add('wrong');mark(i===item.a,item.why);}
+function checkText(){if(answered)return;const item=missions[current].items[index];const val=$('typed').value.trim().toLowerCase().replace(/[.!?]/g,'').replace(/\s+/g,' ');if(!val){$('feedback').textContent='Type an answer first.';return;}const ok=item.answer.some(a=>val===a.toLowerCase().replace(/[.!?]/g,'').replace(/\s+/g,' '));$('typed').disabled=true;mark(ok,ok?item.why:'Suggested answer: '+item.answer[0]+'. '+item.why);}
+function pickMatch(btn,side,i){if(answered||btn.classList.contains('matched'))return;if(side==='l'){document.querySelectorAll('[data-side="l"]').forEach(b=>b.classList.remove('selected'));btn.classList.add('selected');selected=i;}else{if(selected===null){$('feedback').textContent='Choose a word on the left first.';return;}const item=missions[current].items[index];if(selected===i){btn.classList.add('matched');document.querySelector(`[data-side="l"][data-i="${selected}"]`).classList.add('matched');matched.push(i);selected=null;$('feedback').textContent='Good match!';if(matched.length===item.pairs.length)mark(true,'Excellent matching!');}else{btn.classList.add('wrong');$('feedback').textContent='Try another match.';setTimeout(()=>btn.classList.remove('wrong'),500);}}}
+function nextQuestion(){if(!answered)return;const last=index===missions[current].items.length-1;if(last){results[current]=true;$('missionProgress').style.width='100%';updateStats();closeGame();showReport();return;}index++;renderQuestion();}
+function buildReport(){const names={hotel:'Hotel check-in',restaurant:'Restaurant English',city:'Getting around',everyday:'Everyday English',final:'Final travel challenge'};let rows=Object.entries(names).map(([k,n])=>`<div class="report-row"><span>${n}</span><b>${results[k]?'Completed':'Not completed'}</b></div>`).join('');return `<div class="stats"><div class="stat"><b>${score}</b><span>Points</span></div><div class="stat"><b>${correct}/${attempts}</b><span>Correct first checks</span></div><div class="stat"><b>${attempts?Math.round(correct/attempts*100):0}%</b><span>Accuracy</span></div></div><div class="report"><h3>Mission progress</h3>${rows}</div><div class="report"><h3>Teacher's notes</h3><p>${Object.keys(results).length===5?'All five missions completed. Review the items below and practise the expressions in your next lesson.':'Keep going! Complete the remaining missions to build a fuller picture of your progress.'}</p><p>Suggested focus: hotel reservations, restaurant requests, directions, useful travel expressions and polite questions.</p>${errorLog.length?'<h3 style="margin-top:14px">Items to review</h3>'+errorLog.map(e=>`<div class="report-row" style="display:block"><b>${e.mission}</b><br>${e.question}<br><span style="color:#23845f">Suggested answer: ${e.answer}</span></div>`).join(''):'<p>There are no recorded incorrect answers yet.</p>'}</div>`;}
+function showReport(){$('game').classList.remove('active');$('reportContent').innerHTML=buildReport();$('report').classList.add('active');$('report').scrollIntoView({behavior:'smooth',block:'start'});}
+function reportText(){const names={hotel:'Hotel check-in',restaurant:'Restaurant English',city:'Getting around',everyday:'Everyday English',final:'Final travel challenge'};return `TRAVEL READY — TEACHER'S REPORT\nDate: ${new Date().toLocaleDateString()}\nPoints: ${score}\nCorrect answers: ${correct}/${attempts}\nAccuracy: ${attempts?Math.round(correct/attempts*100):0}%\n\nMISSION PROGRESS\n${Object.entries(names).map(([k,n])=>`${n}: ${results[k]?'Completed':'Not completed'}`).join('\n')}\n\nITEMS TO REVIEW\n${errorLog.length?errorLog.map((e,i)=>`${i+1}. ${e.mission}: ${e.question} — Suggested answer: ${e.answer}`).join('\\n'):'No incorrect answers recorded.'}\n\nSUGGESTED REVIEW\nHotel reservations and check-in; restaurant orders and polite requests; directions and sightseeing; everyday expressions; sentence construction.\n\nNote: This report summarizes the activities completed in the game. Writing answers are checked against accepted sample answers, so teacher review is recommended for open-ended language production.`;}
+function copyReport(){const t=reportText();if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(()=>alert('Report copied!')).catch(()=>fallbackCopy(t));}else fallbackCopy(t);}
+function fallbackCopy(t){const x=document.createElement('textarea');x.value=t;document.body.appendChild(x);x.select();document.execCommand('copy');x.remove();alert('Report copied!');}
+function downloadReport(){const blob=new Blob([reportText()],{type:'text/plain;charset=utf-8'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='travel-ready-teacher-report.txt';a.click();URL.revokeObjectURL(a.href);}
+updateStats();
+</script>
+<script>
+const TEACHER_WHATSAPP=""; // Professora: coloque seu número com código do país e DDD, ex.: "5511999999999". Vazio = o aluno escolhe o contato.
+const C=(q,o,why)=>({type:"choice",q,opts:o,a:0,why}),T=(q,answer,hint,why)=>({type:"text",q,answer,hint,why}),M=(q,pairs)=>({type:"match",q,pairs});
+missions.hotel.items.push(
+C("You want to leave the hotel on Sunday. What do you say at the front desk?",["I'd like to check out on Sunday.","I'd like to check up on Sunday.","I'd like to check in the bed."],"“Check out” means to leave the hotel and settle the bill."),
+C("The receptionist gives you a plastic card to open your door. It is a…",["key card","boarding pass","credit bill"],"A key card opens your hotel room."),
+M("Match the hotel words.",[["front desk","reception area"],["luggage","bags and suitcases"],["towel","used to dry your body"],["view","what you see from the window"]]),
+C("You are cold at night. What can you ask for?",["Could I have an extra blanket, please?","Could I have an extra check, please?","Could I have an extra journey, please?"],"A blanket keeps you warm."),
+T("Complete: “Is there free ______ in the hotel?” (internet sem fio)",["wifi","wi-fi","wi fi"],"Two letters, a hyphen and two letters: Wi-...","Wi-Fi is wireless internet."),
+C("Choose the best sentence to ask for a room on a high floor.",["Do you have a room with a view on a high floor?","You have view in floor high?","Room high floor view have you?"],"Use “Do you have...?” to ask if something is available."),
+C("“What time is check-out?” What does the guest want to know?",["When he/she must leave the room.","When breakfast ends.","When the flight departs."],"Check-out is the time you must leave the room."),
+T("Complete: “Could I have a wake-up ______ at 6 a.m.?” (ligação)",["call"],"The hotel phones your room to wake you up.","A wake-up call is an early-morning phone call."),
+C("The air conditioning is not working. What can you say?",["The air conditioning doesn't work. Could you fix it?","The air conditioning is well done.","The air conditioning is my reservation."],"“Fix” means to repair."),
+C("Which word means a person who stays at a hotel?",["guest","chef","driver"],"A hotel guest is a customer staying at the hotel."),
+T("Complete: “I'd like to ______ my stay for one more night.” (prolongar)",["extend"],"It means to make something longer.","To extend means to make longer.")
+);
+missions.restaurant.items.push(
+C("The waiter asks: “Anything to drink?” What does he want to know?",["What you want to drink.","Where you are from.","How much you will pay."],"“Drink” here is a noun: a beverage."),
+M("Match the restaurant words.",[["menu","list of dishes"],["waiter","person who serves food"],["napkin","paper to clean your hands and mouth"],["tip","extra money for good service"]]),
+C("You are allergic to peanuts. What do you tell the waiter?",["I'm allergic to peanuts. Does this dish have them?","I'm angry about peanuts. Is this dish available?","I'm available to peanuts. Is this dish done?"],"“Allergic to” is followed by the thing that causes the allergy."),
+T("Complete: “Could I see the ______, please?” (cardápio)",["menu"],"The list of dishes.","The menu lists the dishes."),
+C("You want more water in your glass. What can you say?",["Could I have a refill, please?","Could I have a rare, please?","Could I have a journey, please?"],"A refill is another serving of the same drink."),
+C("Which meal is the first of the day?",["Breakfast.","Dinner.","Dessert."],"Breakfast = café da manhã."),
+C("You don't eat meat. Which dish is the best choice?",["Vegetable pasta.","Grilled chicken.","Beef burger."],"A vegetarian does not eat meat."),
+C("Your soup is cold. What is a polite thing to say?",["Excuse me, my soup is cold. Could you heat it up?","Excuse me, my soup is a reservation.","Excuse me, my soup is next door."],"“Heat up” means to make hot again."),
+T("Complete: “Is the tip ______ in the check?” (incluída)",["included"],"The tip is already part of the bill.","Included = already part of the price."),
+C("What does “Separate checks, please” mean?",["Each person pays their own bill.","We want one big bill.","We want more dessert."],"Separate = individual."),
+C("A steak cooked until there is no pink inside is…",["well done","rare","sparkling"],"Rare → medium → well done.")
+);
+missions.city.items.push(
+C("“Go straight and turn left at the corner.” What should you do?",["Walk forward and turn left at the end of the street.","Turn around and go back.","Take a taxi to the corner."],"“Go straight” = siga em frente."),
+M("Match the transport words.",[["subway","underground train"],["ticket","card or paper to travel"],["map","drawing of streets and places"],["airport","place where planes arrive and leave"]]),
+C("You want a car with a driver to take you somewhere. What do you take?",["A taxi.","A menu.","A suite."],"A taxi takes you where you want to go."),
+T("Complete: “How do I get ______ the museum?” (chegar ao)",["to"],"A short word showing direction.","“Get to” + place = chegar a."),
+C("How can you ask if a place is far?",["Is it far from here?","Is it dessert from here?","Is it booked from here?"],"“Far from here” = longe daqui."),
+C("“It's a ten-minute walk.” What does it mean?",["You can get there on foot in about ten minutes.","You need a taxi for ten minutes.","It closes in ten minutes."],"Walk = caminhada."),
+M("Match the airport words.",[["gate","door where you board the plane"],["boarding pass","ticket to enter the plane"],["passport","document to travel abroad"],["delayed","later than planned"]]),
+C("The screen says: “Flight 220 — delayed.” What happened?",["The flight will leave later than planned.","The flight left early.","The flight is free."],"Delayed = atrasado."),
+T("Complete: “Excuse me, where can I buy a bus ______?” (bilhete)",["ticket"],"You need it to travel.","A ticket allows you to travel."),
+C("Which sentence asks for help politely?",["Excuse me, could you help me, please?","Hey, help me.","You help me now."],"“Could you...?” is polite."),
+C("At a crosswalk there is a red light. What should you do?",["Wait before crossing the street.","Cross quickly.","Take the elevator."],"Red light = stop.")
+);
+missions.everyday.items.push(
+M("Match the words.",[["neighbor","vizinho"],["husband","marido"],["hungry","com fome"],["weekend","fim de semana"]]),
+C("You are very tired. Choose the correct sentence.",["I'm exhausted. I need to rest.","I'm exhausted. I need a booking.","I'm exhausted. I need a check."],"Exhausted = very tired."),
+C("Someone says: “Nice to meet you!” What is a good reply?",["Nice to meet you, too!","I'm well done.","Thank you, room."],"Say “too” to return the greeting."),
+T("Complete: “I'm looking forward ______ the trip.” (ansioso por)",["to"],"A two-letter word.","“Look forward to” = ansiar por."),
+C("Someone asks: “What do you do?” What do they want to know?",["Your job.","Your hotel.","Your dinner."],"“What do you do?” asks about work."),
+C("Which word is the opposite of “happy”?",["sad","ready","near"],"Happy ↔ sad."),
+C("“I'll call you later.” What does it mean?",["I will phone you at a later time.","I called you yesterday.","I never call."],"Later = mais tarde."),
+T("Complete: “Gossip is not always ______.” (verdade)",["true"],"The opposite of false.","True = verdadeiro."),
+C("“She has faith in her team.” What does it mean?",["She trusts her team.","She is afraid of her team.","She works for another team."],"Faith = fé/confiança."),
+C("You don't understand a sentence. What can you say?",["Could you repeat that, please?","Could you reserve that, please?","Could you order that, please?"],"A polite way to ask someone to say it again."),
+C("“I owe money to the bank.” What do I have?",["a debt","a wife","a faith"],"Debt = dívida."),
+C("Which question asks about the day's weather?",["What's the weather like today?","What's the wife like today?","What's the debt like today?"],"Weather = clima.")
+);
+missions.final.items.push(
+C("At immigration: “What is the purpose of your visit?” Best answer:",["I'm here on vacation.","I'm here on dessert.","I'm here in the elevator."],"Purpose = motivo."),
+C("“How long are you staying?” Best answer:",["For two weeks.","By myself.","On the side."],"“How long” asks about duration."),
+T("Complete: “I'm staying at a hotel ______ the city center.” (perto)",["near"],"The word means close to.","Near = close to."),
+C("Your suitcase did not arrive at the airport. What do you say?",["Excuse me, my luggage didn't arrive.","Excuse me, my luggage is dessert.","Excuse me, my luggage is available."],"Luggage = bagagem."),
+C("The taxi driver asks: “Where to?” You want to go to the hotel.",["To the Grand Hotel, please.","Medium, please.","Sparkling, please."],"“Where to?” asks for your destination."),
+C("You want to know the price of a souvenir.",["How much is this?","How long is this?","How far is this?"],"“How much” asks about price."),
+T("Write a polite question to ask where the restroom is.",["where is the restroom","where is the restroom please","where's the restroom","where's the restroom please","where is the bathroom","where is the bathroom please","where's the bathroom","could you tell me where the restroom is","could you tell me where the bathroom is","can you tell me where the restroom is","can you tell me where the bathroom is"],"Start with “Where is...” or “Can/Could you tell me where...”","Restroom/bathroom are both common in the U.S."),
+C("Your restaurant check is wrong. What do you say?",["I think there's a mistake on the check.","I think there's a booking in my dessert.","I think there's a journey on the check."],"Mistake = erro."),
+C("You want to pay by credit card. What do you ask?",["Can I pay by card?","Can I pay by journey?","Can I pay by sparkling?"],"“Pay by card” = pagar com cartão."),
+C("Your flight was cancelled. What does it mean?",["The flight will not happen.","The flight is late.","The flight is full."],"Cancelled = cancelado."),
+C("The receptionist says: “Enjoy your stay!” What do you answer?",["Thank you!","I'm done.","Medium."],"A friendly wish deserves a thank you.")
+);
+let lastPos=-1;
+function shuf(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+function shuffleOpts(it){const a=shuf(it.opts.map((v,i)=>({v,i})));let p=a.findIndex(o=>o.i===it.a);if(p===lastPos&&a.length>1){let q;do{q=Math.floor(Math.random()*a.length)}while(q===p);[a[p],a[q]]=[a[q],a[p]];p=q}lastPos=p;return a}
+const skillNames={hotel:"Hotel",restaurant:"Restaurant",city:"Getting around",everyday:"Everyday English",final:"Travel situations"};
+let stats={},answerLog=[],lastGiven="",feel="";
+const _mark=window.mark,_choose=window.choose;
+window.choose=function(b,i){lastGiven=b.textContent;_choose(b,i)};
+window.checkText=function(){if(answered)return;const it=missions[current].items[index],n=s=>s.toLowerCase().replace(/[.!?,]/g,"").replace(/\bcould\b/g,"can").replace(/where's/g,"where is").replace(/^excuse me /,"").replace(/\s+/g," ").trim(),v=n($("typed").value);if(!v){$("feedback").textContent="Type an answer first.";return}lastGiven=$("typed").value.trim();const ok=it.answer.some(a=>n(a)===v);$("typed").disabled=true;mark(ok,ok?(it.why||"Great!"):"Suggested answer: "+it.answer[0]+". "+(it.why||""))};
+window.mark=function(ok,msg){if(answered)return;const it=missions[current].items[index],s=stats[current]=stats[current]||{a:0,c:0};s.a++;if(ok)s.c++;answerLog.push({m:current,q:it.q,given:it.type==="match"?"(matching)":lastGiven,exp:it.type==="choice"?it.opts[it.a]:it.type==="text"?it.answer[0]:"(matching)",ok});_mark(ok,msg||(ok?"Great job!":"The correct answer is highlighted."))};
+function setFeel(b){document.querySelectorAll("#feel button").forEach(x=>x.classList.remove("on"));b.classList.add("on");feel=b.dataset.f}
+function skills(){return Object.keys(skillNames).map(k=>{const s=stats[k]||{a:0,c:0};return{n:skillNames[k],a:s.a,c:s.c,p:s.a?Math.round(s.c/s.a*100):null}})}
+function focus(){const l=skills().filter(s=>s.a).sort((a,b)=>a.p-b.p);return l.length?l.slice(0,2).map(s=>s.n).join(" and "):"complete more missions"}
+function buildReport(){const sk=skills(),acc=attempts?Math.round(correct/attempts*100):0;return `<div class="stats"><div class="stat"><b>${score}</b><span>Points</span></div><div class="stat"><b>${correct}/${attempts}</b><span>Correct first checks</span></div><div class="stat"><b>${acc}%</b><span>Accuracy</span></div></div><div class="report"><h3>Performance by skill</h3>${sk.map(s=>`<div class="report-row" style="border:0"><span>${s.n}</span><b>${s.a?s.c+"/"+s.a+" ("+s.p+"%)":"not started"}</b></div><div class="bar"><i style="width:${s.p||0}%"></i></div>`).join("")}</div><div class="report"><h3>Teacher's notes</h3><p>${Object.keys(results).length===5?"All five missions completed! Review the items below.":"Keep going! Complete the remaining missions for a fuller report."}</p><p>Suggested focus: <b>${focus()}</b>.</p>${errorLog.length?"<h3 style='margin-top:14px'>Items to review</h3>"+errorLog.map(e=>`<div class="report-row" style="display:block"><b>${e.mission}</b><br>${e.question}<br><span style="color:#0fa968">Suggested answer: ${e.answer}</span></div>`).join(""):"<p>No incorrect answers recorded yet. 🎉</p>"}</div>`}
+function reportText(full=true){const nm=($("stName").value||"").trim()||"(no name)",ft=($("feelText").value||"").trim(),acc=attempts?Math.round(correct/attempts*100):0,sk=skills().map(s=>`- ${s.n}: ${s.a?s.c+"/"+s.a+" ("+s.p+"%)":"not started"}`).join("\n"),errs=errorLog.length?errorLog.slice(0,full?999:5).map((e,i)=>`${i+1}. ${e.question} → ${e.answer}`).join("\n"):"No incorrect answers recorded.";let t=`TRAVEL READY — TEACHER'S REPORT\nStudent: ${nm}\nDate: ${new Date().toLocaleString()}\nPoints: ${score} | Correct: ${correct}/${attempts} (${acc}%)\nMissions completed: ${Object.keys(results).length}/5\n\nPERFORMANCE BY SKILL\n${sk}\n\nHOW I FELT\n${feel||"(not answered)"}${ft?"\n"+ft:""}\n\nITEMS TO REVIEW${full?"":" (first 5)"}\n${errs}\n\nSUGGESTED FOCUS: ${focus()}`;if(full)t+=`\n\nALL ANSWERS\n${answerLog.map((a,i)=>`${i+1}. [${skillNames[a.m]}] ${a.ok?"✓":"✗"} ${a.q}\n   Student: ${a.given||"-"}${a.ok?"":" | Correct: "+a.exp}`).join("\n")}\n\nNote: writing answers are checked against sample answers; teacher review is recommended.`;return t}
+function sendWhatsApp(){if(!($("stName").value||"").trim()){alert("Please write your name first.");$("stName").focus();return}const msg="Hi teacher! This is my Travel Ready report 🎒✈️\n\n"+reportText(false)+"\n\n(Full report with all my answers: attached .txt)";window.open("https://wa.me/"+TEACHER_WHATSAPP+"?text="+encodeURIComponent(msg),"_blank")}
+</script>
+</body></html>
+
+<script>
+/* ===== SAVE / RESTORE PROGRESS (localStorage) ===== */
+(function(){
+const KEY="travelReady.alexandrereview.v1";
+let progress={};            // missionId -> number of questions already answered
+let storageOK=true;
+
+function snapshot(){
+  return {v:1,savedAt:Date.now(),score,attempts,correct,results,errorLog,stats,answerLog,feel,progress,
+    name:($("stName").value||""),feelText:($("feelText").value||"")};
+}
+window.saveProgress=function(){
+  try{localStorage.setItem(KEY,JSON.stringify(snapshot()));}
+  catch(e){ if(storageOK){storageOK=false;console.warn("Progress could not be saved:",e);} }
+};
+function load(){
+  try{const raw=localStorage.getItem(KEY);if(!raw)return null;const d=JSON.parse(raw);return(d&&d.v===1)?d:null;}
+  catch(e){return null;}
+}
+const num=(x)=>Number.isFinite(x)?x:0;
+const obj=(x)=>(x&&typeof x==="object"&&!Array.isArray(x))?x:{};
+const arr=(x)=>Array.isArray(x)?x:[];
+
+function refreshCards(){
+  document.querySelectorAll('.mission button[onclick^="startMission"]').forEach(btn=>{
+    const m=/startMission\('(\w+)'\)/.exec(btn.getAttribute("onclick")||"");if(!m)return;
+    const id=m[1],len=missions[id].items.length,n=progress[id]||0;
+    btn.textContent=results[id]?"✓ Completed · Play again":(n>0&&n<len?"Continue ("+n+"/"+len+") →":"Start mission →");
+  });
+}
+window.refreshMissionCards=refreshCards;
+
+// --- restore ---
+const d=load();
+if(d){
+  score=num(d.score);attempts=num(d.attempts);correct=num(d.correct);
+  results=obj(d.results);errorLog=arr(d.errorLog);stats=obj(d.stats);answerLog=arr(d.answerLog);
+  feel=typeof d.feel==="string"?d.feel:"";progress=obj(d.progress);
+  // last question answered but "Finish" not clicked -> count mission as completed
+  Object.keys(missions).forEach(id=>{if((progress[id]||0)>=missions[id].items.length)results[id]=true;});
+  $("stName").value=typeof d.name==="string"?d.name:"";
+  $("feelText").value=typeof d.feelText==="string"?d.feelText:"";
+  document.querySelectorAll("#feel button").forEach(b=>b.classList.toggle("on",!!feel&&b.dataset.f===feel));
+  updateStats();
+  if(attempts>0||Object.keys(results).length||Object.keys(progress).length){
+    const done=Object.keys(results).length;
+    const open=Object.keys(missions).find(id=>!results[id]&&(progress[id]||0)>0);
+    let t="👋 Welcome back! You have "+done+"/5 missions completed and "+score+" points.";
+    if(open)t+=" Pick up where you left off in “"+missions[open].label.replace(/^\S+\s/,"")+"”.";
+    $("welcomeText").textContent=t;$("welcomeBack").style.display="flex";
+  }
+}
+refreshCards();
+
+// --- start mission: offer to continue where the student stopped ---
+const _start=window.startMission;
+window.startMission=function(id){
+  const len=missions[id].items.length,n=progress[id]||0;
+  let from=0;
+  if(!results[id]&&n>0&&n<len){
+    if(confirm("Continue from challenge "+(n+1)+" of "+len+"?\n\nOK = continue · Cancel = start this mission again")) from=n;
+    else progress[id]=0;
+  }else{progress[id]=0;}
+  _start(id);
+  if(from){index=from;renderQuestion();}
+  saveProgress();
+};
+
+// --- save after every answer and every "next" ---
+const _mark2=window.mark;
+window.mark=function(ok,msg){
+  if(answered)return;
+  _mark2(ok,msg);
+  progress[current]=Math.max(progress[current]||0,index+1);
+  saveProgress();refreshCards();
+};
+const _next=window.nextQuestion;
+window.nextQuestion=function(){_next();saveProgress();refreshCards();};
+
+// --- report form fields ---
+const _feel=window.setFeel;
+window.setFeel=function(b){_feel(b);saveProgress();};
+$("stName").addEventListener("input",saveProgress);
+$("feelText").addEventListener("input",saveProgress);
+
+// --- reset ---
+window.resetProgress=function(){
+  if(!confirm("Erase all your progress and start from the beginning?"))return;
+  try{localStorage.removeItem(KEY);}catch(e){}
+  location.replace(location.pathname+location.search);
+};
+})();
+</script>
